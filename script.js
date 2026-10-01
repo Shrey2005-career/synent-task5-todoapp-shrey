@@ -15,13 +15,30 @@ function updateEmptyState() {
 function renderTask(task) {
   const row = document.createElement("li");
   row.dataset.id = task.id;
+  const label = document.createElement("label");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = task.completed;
   const text = document.createElement("span");
   text.textContent = task.text;
-  row.append(text);
+  const completion = document.createElement("span");
+  completion.dataset.completion = "";
+  completion.textContent = task.completed ? " (Completed)" : "";
+  label.append(checkbox, " ", text);
+  row.append(label, completion);
   list.append(row);
 }
 
 input.addEventListener("input", () => input.setCustomValidity(""));
+
+list.addEventListener("change", (event) => {
+  if (!event.target.matches('input[type="checkbox"]')) return;
+  const row = event.target.closest("li");
+  const task = tasks.get(row.dataset.id);
+  task.completed = event.target.checked;
+  row.querySelector("[data-completion]").textContent = task.completed ? " (Completed)" : "";
+  status.textContent = task.completed ? "Task completed." : "Task marked incomplete.";
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();

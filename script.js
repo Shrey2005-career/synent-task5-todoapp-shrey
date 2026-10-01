@@ -25,11 +25,29 @@ function renderTask(task) {
   completion.dataset.completion = "";
   completion.textContent = task.completed ? " (Completed)" : "";
   label.append(checkbox, " ", text);
-  row.append(label, completion);
+  const deleteButton = document.createElement("button");
+  deleteButton.type = "button";
+  deleteButton.dataset.action = "delete";
+  deleteButton.textContent = "Delete";
+  deleteButton.setAttribute("aria-label", `Delete task: ${task.text}`);
+  row.append(label, completion, " ", deleteButton);
   list.append(row);
 }
 
 input.addEventListener("input", () => input.setCustomValidity(""));
+
+list.addEventListener("click", (event) => {
+  const button = event.target.closest('button[data-action="delete"]');
+  if (!button) return;
+  const row = button.closest("li");
+  const focusTarget = row.nextElementSibling?.querySelector("button")
+    ?? row.previousElementSibling?.querySelector("button") ?? input;
+  tasks.delete(row.dataset.id);
+  row.remove();
+  updateEmptyState();
+  focusTarget.focus();
+  status.textContent = "Task deleted.";
+});
 
 list.addEventListener("change", (event) => {
   if (!event.target.matches('input[type="checkbox"]')) return;

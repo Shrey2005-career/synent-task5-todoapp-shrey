@@ -1,7 +1,16 @@
 # To-do list — Synent Task 5
 
-A lightweight HTML and vanilla JavaScript task manager. Visual styling is
-intentionally deferred; controls use the browser's default appearance.
+A lightweight HTML, CSS, and vanilla JavaScript task manager, presented as
+“one thing.” with an Onyx Mono-inspired light theme.
+
+## Design
+
+- Faded CSS radial-gradient dots behind a solid task panel; no image or animation library.
+- General Sans for the interface and Recia for introductory/empty-state accents.
+  Fonts are served by Fontshare; Arial and Georgia provide offline fallbacks.
+- Responsive layout, visible keyboard focus, native checkboxes, and text wrapping
+  for long tasks. Completed tasks retain readable text with a strikethrough.
+- No loader, framework, Tailwind, or build dependencies. Core app logic is unchanged.
 
 ## Run
 

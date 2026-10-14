@@ -3,6 +3,8 @@
 A lightweight HTML, CSS, and vanilla JavaScript task manager, presented as
 “one thing.” with an Onyx Mono-inspired light theme.
 
+[Watch demo video on YouTube](https://youtu.be/HcyjTYCG3Ms)
+
 ## Design
 
 - Faded CSS radial-gradient dots behind a solid task panel; no image or animation library.

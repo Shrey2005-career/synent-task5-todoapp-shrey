@@ -3,7 +3,7 @@
 A lightweight HTML, CSS, and vanilla JavaScript task manager, presented as
 “one thing.” with an Onyx Mono-inspired light theme.
 
-[Watch demo video on YouTube](https://youtu.be/HcyjTYCG3Ms)
+[Watch demo video on YouTube](https://youtu.be/NEiOmtUIzUY)
 
 ## Design
 

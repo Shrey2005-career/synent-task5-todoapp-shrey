@@ -5,6 +5,22 @@ A lightweight HTML, CSS, and vanilla JavaScript task manager, presented as
 
 [Watch demo video on YouTube](https://youtu.be/NEiOmtUIzUY)
 
+[Read the concise project report](REPORT.md)
+
+## Screenshots
+
+### Desktop empty state
+
+![To-do application empty state on desktop](<screenshots/Screenshot (130).png>)
+
+### Task management
+
+![Completed and active tasks displayed in the to-do application](<screenshots/Screenshot (131).png>)
+
+### Mobile layout
+
+![Responsive to-do application on mobile](<screenshots/Screenshot (132).png>)
+
 ## Design
 
 - Faded CSS radial-gradient dots behind a solid task panel; no image or animation library.

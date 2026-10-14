@@ -14,16 +14,6 @@ A lightweight HTML, CSS, and vanilla JavaScript task manager, presented as
   for long tasks. Completed tasks retain readable text with a strikethrough.
 - No loader, framework, Tailwind, or build dependencies. Core app logic is unchanged.
 
-## Run
-
-From this folder in PowerShell:
-
-```powershell
-python -m http.server 4175 --bind 127.0.0.1
-```
-
-Open http://localhost:4175. No dependencies or build step are required.
-
 ## Implementation slices
 
 1. Semantic HTML and accessible native controls.
